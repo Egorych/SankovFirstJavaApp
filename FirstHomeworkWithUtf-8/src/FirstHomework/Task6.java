@@ -1,4 +1,4 @@
-package FirstHomework;
+﻿package FirstHomework;
 
 import java.util.Scanner;
 
@@ -20,7 +20,7 @@ public class Task6 {
 			if (ostatok == 1 && count == 0) System.out.println("Вы ввели  "+intCash+" рубль");
 			else 
 			{
-				if (ostatok==2 || ostatok==4 || ostatok==35 && count == 0) System.out.println("Вы ввели  "+intCash+" рубля");
+				if (ostatok==2 || ostatok==4 || ostatok==3 && count == 0) System.out.println("Вы ввели  "+intCash+" рубля");
 				else if(count == 0)System.out.println("Вы ввели "+intCash+" рублей");
 			}
 		}
