@@ -1,0 +1,83 @@
+Overloading
+
+При перегрузке метода имя метода должно быть одинаковым, иначе это уже будет не перегрузка, а другой метод.
+Каждый перегружаемый метод должен иметь своё кол-во и разные по типу данных параметры.
+
+package Homework3;
+
+public class OverloadExperiment {
+
+	public void method() {
+		System.out.println('s');
+	}
+
+	public void method(int x) {
+		System.out.println(x);
+	}
+
+	public void method(String s) {
+	}
+}
+
+Если метод возвращает какое-то значение,и в другом перегружаемом методе различается его тип, то всё равно 
+нужно придержваиться правила с передачей кол-ва параметров, будет ошибка.
+
+
+package Homework3;
+
+public class OverloadExperiment {
+
+	public int method(int x) {
+		System.out.println(x);
+		return x;
+	}
+
+	public String method(int x) { //Ошибка, совпадает кол-во и тип передаваемых параметров
+		String s="s";
+		return s;
+	}
+}
+
+Рабочий вариант:
+
+
+package Homework3;
+
+public class OverloadExperiment {
+
+	public int method(int x) {
+		System.out.println(x);
+		return x;
+	}
+
+	public String method(int x, int y) {
+		String s =("Sum ="+ (x + y));
+		return s;
+	}
+}
+
+
+Влияние модификаторов доступа на перегрузку методов.
+
+
+package Homework3;
+
+public class OverloadExperiment {
+
+	public int method(int x) { //Метод доступен для любых классов
+		System.out.println(x);
+		return x;
+	}
+
+	private int method(int x, int y) { //Метод доступен только внутри класса OverloadExperiment
+		return x + y;
+	}
+
+	final int method(int x, int y, String s) { //Метод не может быть переопределен в подклассах
+		return x + y;
+	}
+	
+	default int method(String s, int y) { //Ошибка, default доступен только в интерфейсах
+		return y;
+	}
+}
