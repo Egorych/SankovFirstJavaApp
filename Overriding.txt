@@ -1,0 +1,69 @@
+Overriding.
+
+ѕри переопределении метода им€ метода может быть одинаковым, может быть разным, также как и иметь одинаковое или
+разное кол-во и одинаковый или разный тип данных у параметров. “акже можно задавать абсолютно разные типы возвра-
+щаемых данных.
+
+
+package Homework3;
+
+public class OverrideExperiment {
+
+	class A {
+		public String method(String s) { // ћетод доступен дл€ любых классов
+			System.out.println("S");
+			return s;
+		}
+	}
+
+	class B extends A {
+		public int method2(int x) { // ћетод доступен дл€ любых классов
+			System.out.println(x);
+			return x;
+		}	
+	}
+	
+	class C extends A {
+		public void  method(int x, int y) { // ћетод доступен дл€ любых классов
+			System.out.println(x);
+		}	
+	}
+}
+
+ћожно даже переопределить абсолютно одинаковые методы и не будет ошибки.
+
+package Homework3;
+
+public class OverrideExperiment {
+
+	class A {
+		public String method(String s) { // ћетод доступен дл€ любых классов
+			System.out.println("S");
+			return s;
+		}
+	}
+
+	class B extends A {
+		public String method(String s) { // ћетод доступен дл€ любых классов
+			System.out.println("S");
+			return s;
+		}
+	}
+	
+	class C extends A {
+		public String method(String s) { // ћетод доступен дл€ любых классов
+			System.out.println("S");
+			return s;
+		}
+	}
+}
+
+¬ли€ние модификаторов доступа на переопределение методов такое же как и на перегрузку.
+
+public - метод доступен дл€ всех других классов
+private - метод доступен только внутри класса, где он определен
+abstract - метод должен быть €вно определен в подклассе
+static - метод €вл€етс€ методом самого класса, а не экземпл€ра
+final - метод не может быть переопределен в подклассах
+
+
