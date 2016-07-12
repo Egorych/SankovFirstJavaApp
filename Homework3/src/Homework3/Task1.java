@@ -13,7 +13,7 @@ public class Task1 {
 			{
 				char[] wordToCharArray = words[i].toCharArray();//transfer the word to a line of symbols
 				wordToCharArray[k] = '!';//give to an k element the set symbol
-				words[i] = new String(wordToCharArray);//write down value to the massif
+				words[i] = new String(wordToCharArray);//write down value to the array
 				
 			}
 			System.out.print (words[i] + " ");//print to the screen the array  
