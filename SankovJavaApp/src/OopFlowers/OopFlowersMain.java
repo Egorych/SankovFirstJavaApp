@@ -28,6 +28,8 @@ public class OopFlowersMain {
 					tax.showTax();
 				}
 				break;
+			case 6:
+				
 			case 0:
 				stop = true;
 				System.out.println("Вы вышли из программы!");
