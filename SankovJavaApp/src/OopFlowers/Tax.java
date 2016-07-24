@@ -40,7 +40,7 @@ public abstract class Tax {
 
 	}
 
-	public void summaDohoda() {// Посчитали сумму минус налог
+	public void summaDohoda() {// Посчитали сумму минус налог;
 		summaDohoda = dohod - summaNaloga;
 	}
 
