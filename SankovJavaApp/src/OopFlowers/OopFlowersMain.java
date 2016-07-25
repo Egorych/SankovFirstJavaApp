@@ -27,6 +27,18 @@ public class OopFlowersMain {
 				MainWork mainwork = new MainWork();
 				taxes.add(mainwork);
 				break;
+			case 2:
+				AdditionalWork additionalWork = new AdditionalWork();
+				taxes.add(additionalWork);
+				break;
+			case 3:
+				PropertyTax propertyTax = new PropertyTax();
+				taxes.add(propertyTax);
+				break;
+			case 4:
+				RemunerationTax remunerationTax = new RemunerationTax();
+				taxes.add(remunerationTax);
+				break;
 			case 5:
 				if (taxes.size() == 0)
 					System.out.println("Данных нет!");
@@ -49,6 +61,9 @@ public class OopFlowersMain {
 			case 0:
 				stop = true;
 				System.out.println("Вы вышли из программы!");
+				break;
+			default:
+				System.out.println("Вводите только существующие пункты меню!!!");
 				break;
 			}
 		}
