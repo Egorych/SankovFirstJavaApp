@@ -22,10 +22,15 @@ public class RemunerationTax extends Tax {
 
 	}
 
-	
 	@Override
-	public void showTax(){
-		System.out.println("Введено вознаграждение без налога: " + getDohod() + "   Процент налога от вознаграждения: 17%   Сумма налога: " + getSummaNaloga()
-				+ "   Остаток от вознаграждения: " + getSummaDohoda());
+	// public void showTax(){
+	// System.out.println("Введено вознаграждение без налога: " + getDohod() + "
+	// Процент налога от вознаграждения: 17% Сумма налога: " + getSummaNaloga()
+	// + " Остаток от вознаграждения: " + getSummaDohoda());
+	// }
+	public void showTax() {
+		System.out.printf("%-50s%-10d%-40s%-4d%-12s%-8d%-35s%-10d%n", "Введено вознаграждение без налога:", getDohod(),
+				"Процент налога от вознаграждения", getProcent(), "Сумма налога:", getSummaNaloga(),
+				"Остаток от вознаграждения:", getSummaDohoda());
 	}
 }

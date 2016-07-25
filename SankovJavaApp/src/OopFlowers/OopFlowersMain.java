@@ -21,7 +21,7 @@ public class OopFlowersMain {
 				System.out.println("Введён неверный символ! ");
 				number = 7;
 			}
-			// int number = numberOfNalog.nextInt();
+			// int number = numberOfNalog.nextInt(); Scanner
 			switch (number) {
 			case 1:
 				MainWork mainwork = new MainWork();

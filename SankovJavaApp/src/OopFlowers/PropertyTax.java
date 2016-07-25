@@ -22,10 +22,16 @@ public class PropertyTax extends Tax {
 
 	}
 
-	
 	@Override
-	public void showTax(){
-		System.out.println("Введена сумма с продажи имущества без налога: " + getDohod() + "   Процент налога с продажи имущества: 20%   Сумма налога: " + getSummaNaloga()
-				+ "   Остаток с продажи имущества: " + getSummaDohoda());
+	// public void showTax(){
+	// System.out.println("Введена сумма с продажи имущества без налога: " +
+	// getDohod() + " Процент налога с продажи имущества: 20% Сумма налога: " +
+	// getSummaNaloga()
+	// + " Остаток с продажи имущества: " + getSummaDohoda());
+	// }
+	public void showTax() {
+		System.out.printf("%-50s%-10d%-40s%-4d%-12s%-8d%-35s%-10d%n", "Введена сумма с продажи имущества без налога:",
+				getDohod(), "Процент налога с продажи имущества:", getProcent(), "Сумма налога:", getSummaNaloga(),
+				"Остаток с продажи имущества:", getSummaDohoda());
 	}
 }

@@ -46,8 +46,8 @@ public abstract class Tax {
 
 	public void getSumFromUser() {
 	}
-	
-	public void showTax(){
-		
+
+	public void showTax() {
+
 	}
 }
