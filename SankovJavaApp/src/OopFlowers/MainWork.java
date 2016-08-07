@@ -7,7 +7,6 @@ public class MainWork extends Tax {
 	public MainWork() {
 		setProcent(11);
 		getSumFromUser();
-		// System.out.println(toString());
 	}
 
 	@Override
@@ -22,14 +21,7 @@ public class MainWork extends Tax {
 		System.out.println("Налог добавлен!");
 
 	}
-
-	/*
-	 * @Override public String toString() { return "\nСумма без налога:" +
-	 * getDohod() +
-	 * "\nПроцент налога с основной работы: 11%\nНалог с дохода основной работы: "
-	 * + getSummaNaloga() + "\nЗарплата основной работы: " + getSummaDohoda(); }
-	 */
-
+	
 	@Override
 	public void showTax() {
 		System.out.printf("%-50s%-10d%-40s%-4d%-12s%-8d%-35s%-10d%n", "Введена сумма с основной работы без налога: ",

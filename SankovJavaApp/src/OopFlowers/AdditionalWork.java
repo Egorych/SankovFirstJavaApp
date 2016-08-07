@@ -24,10 +24,6 @@ public class AdditionalWork extends Tax {
 
 	@Override
 	public void showTax() {
-		// System.out.println("Введена сумма с дополнительной работы без налога:
-		// " + getDohod() + " Процент налога с дополнительной работы: 15% Сумма
-		// налога: " + getSummaNaloga()
-		// + " Зарплата дополнительной работы: " + getSummaDohoda());
 		System.out.printf("%-50s%-10d%-40s%-4d%-12s%-8d%-35s%-10d%n",
 				"Введена сумма с дополнительной работы без налога:", getDohod(),
 				"Процент налога с дополнительной работы:", getProcent(), "Сумма налога:", getSummaNaloga(),

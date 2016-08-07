@@ -1,7 +1,11 @@
 package OopFlowers;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class OopFlowersMain {
@@ -9,8 +13,34 @@ public class OopFlowersMain {
 	public static void main(String[] args) {
 
 		boolean stop = false;
-		int number = 0;
-		ArrayList taxes = new ArrayList<Tax>();
+		int number = 0, numberOfLang = 0;
+		String language="", country = "";
+		ArrayList<Tax> taxes = new ArrayList<Tax>();
+		System.out.println("Choose language:\n1)English\n2)Русский");
+		Scanner languageNumb = new Scanner(System.in);
+			try{
+				numberOfLang = languageNumb.nextInt();
+			}catch (java.util.InputMismatchException e) {
+				System.out.println("Error!");
+			}
+		
+		switch (numberOfLang) {
+		case 1:
+			language = "EN";
+			country = "US";
+			break;
+		case 2:
+			language = "RU";
+			country = "RUS";
+			break;}
+		Locale current = new Locale(language, country);
+		ResourceBundle res = ResourceBundle.getBundle("OopFlowersProperties.text", current);
+		Date currentDate = new Date();
+		DateFormat df = DateFormat.getDateInstance(DateFormat.FULL,current);
+		DateFormat time = DateFormat.getTimeInstance(DateFormat.MEDIUM);
+		System.out.println("\n" + time.format(currentDate) + " " + df.format(currentDate));
+		//System.out.println(res.getString("operation"));
+		
 		while (!stop) {
 			System.out.println(
 					"\nВыберите действие:\n1)Налог на основную работу\n2)Налог на дополнительную работу\n3)Налог на продажу иммущества\n4)Налог на вознаграждение\n5)Показать все налоги\n6)Сортировать налоги по сумме\n0)Выход");
@@ -21,7 +51,7 @@ public class OopFlowersMain {
 				System.out.println("Введён неверный символ! ");
 				number = 7;
 			}
-			// int number = numberOfNalog.nextInt(); Scanner
+
 			switch (number) {
 			case 1:
 				MainWork mainwork = new MainWork();
@@ -67,5 +97,6 @@ public class OopFlowersMain {
 				break;
 			}
 		}
+
 	}
 }
