@@ -29,8 +29,8 @@ public class MainWork extends Tax {
 
 	@Override
 	public void showTax() {
-		System.out.printf("%-55s%-10d%-40s%-4d%-12s%-8d%-35s%-10d%n", res.getString("osnwithout"),
-				getDohod(), res.getString("procosn"), getProcent(), res.getString("sumnal"), getSummaNaloga(),
+		System.out.printf("%-55s%-10d%-40s%-4d%-12s%-8d%-35s%-10d%n", res.getString("osnwithout"), getDohod(),
+				res.getString("procosn"), getProcent(), res.getString("sumnal"), getSummaNaloga(),
 				res.getString("zarposn"), getSummaDohoda());
 	}
 }

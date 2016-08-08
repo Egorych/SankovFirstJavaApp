@@ -39,7 +39,7 @@ public class OopFlowersMain {
 			while (!stop) {
 				System.out.println("\n" + res.getString("operation") + "\n" + res.getString("osnwork") + "\n"
 						+ res.getString("dopwork") + "\n" + res.getString("immun") + "\n" + res.getString("vozn") + "\n"
-						+ res.getString("showall") + "\n" + res.getString("sortnal") + "\n" +res.getString("exit"));
+						+ res.getString("showall") + "\n" + res.getString("sortnal") + "\n" + res.getString("exit"));
 				number = languageNumb.nextInt();
 				switch (number) {
 				case 1:
