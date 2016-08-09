@@ -3,7 +3,7 @@ package OopFlowers;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class AdditionalWork extends Tax {
+public class AdditionalWork extends Tax {//
 	Scanner vvodDohoda;
 	ResourceBundle res;
 
